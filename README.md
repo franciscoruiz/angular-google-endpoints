@@ -24,7 +24,7 @@ For generic details on how to use Google Enpoints from JavaScript, check the [of
 angular.module('myApp.resources', [])
   .factory('MyResource', ['endpointsClient', function (endpointsClient) {
     return endpointsClient.Resource(
-    'your_api_name', 'v1', 'https://your_app_id.appspot.com/_ah/api',
+      'your_api_name', 'v1', 'https://your_app_id.appspot.com/_ah/api',
       {
         do_something: 'do_something',
         update: 'patch',
@@ -40,17 +40,17 @@ angular.module('myApp.resources', [])
 ```js
 
 angular.module('myApp.controllers', [])
-    .controller('HomeCtrl', ['$scope', 'MyResource',
-        function ($scope, MyResource) {
-            $scope.load_completed = false;
+  .controller('HomeCtrl', ['$scope', 'MyResource',
+    function ($scope, MyResource) {
+      $scope.load_completed = false;
 
-            MyResource.do_something({action_type: 'cool stuff'})
-              .then(function (response) {
-                $scope.result = response.action_result;
-                $scope.load_completed = true;
-              });
-        }
-    ])
+      MyResource.do_something({action_type: 'cool stuff'})
+        .then(function (response) {
+          $scope.result = response.action_result;
+          $scope.load_completed = true;
+      });
+    }
+  ]);
 
 ```
 
