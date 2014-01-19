@@ -10,7 +10,7 @@ For generic details on how to use Google Enpoints from JavaScript, check the [of
 [3]: https://developers.google.com/appengine/docs/python/endpoints/consume_js
 [4]: https://cloud.google.com/developers/articles/angularjs-cloud-endpoints-recipe-for-building-modern-web-applications
 
-## Step 1: Add Google's JavaScript client library
+## Step 1: Add Google API's JavaScript client library
 
 
 ```html
